@@ -12,22 +12,18 @@ body {
   background-color: #fafafa;
 }
 
-/* ===== HEADER & NAVBAR ===== */
+/* ===== HEADER & NAVBAR (Menu Top Left Corner) ===== */
 header {
-  background: #9178eb;
-  color: white;
-  padding: 10px 20px;
+  background: #897bca;
+  color: rgb(1, 94, 13);
+  padding: 10px 25px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-header img {
-  height: 50px;
-  width: auto;
-}
-
+/* ===== NAVIGATION MENU ===== */
 /* ====== Navbar ====== */
 header {
   background: #8a95d6; /* Dark blue college theme */
@@ -70,7 +66,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #270118;
+  color: #0d7e12;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -79,6 +75,17 @@ header {
   color: #ffcc00; /* Highlight yellow */
 }
 
+/* ===== LOGO SECTION ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  height: 60px;
+  width: auto;
+}
 
 /* ===== MAIN SECTIONS ===== */
 section {
@@ -96,28 +103,28 @@ p {
   margin: 0 auto 20px auto;
 }
 
-/* ===== GALLERY ===== */
+/* ===== EVENTS / GALLERY ===== */
 .gallery-section {
   margin-top: 50px;
 }
 
 .gallery-section h3 {
-  margin-bottom: 20px;
-  font-size: 1.3rem;
+  margin-top: 20px;
+  font-size: 1.4rem;
   color: #003366;
 }
 
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 30px auto;
 }
 
 .gallery-container img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -130,7 +137,7 @@ p {
 /* ===== CONTACT FORM ===== */
 .contact-form {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -163,6 +170,7 @@ p {
 /* ===== ACHIEVEMENTS ===== */
 #achievements-page {
   background: #f4f9ff;
+  padding: 60px 20px;
 }
 
 .achievements-container {
@@ -207,34 +215,20 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+  margin-top: 50px;
 }
 
-/* ===== MOBILE RESPONSIVE STYLES ===== */
-@media (max-width: 900px) {
+/* ===== RESPONSIVE STYLES ===== */
+
+/* --- Medium Screens (Tablets & Small Laptops) --- */
+@media (max-width: 992px) {
   nav ul {
     gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  nav ul li a {
-    font-size: 15px;
+    flex-wrap: wrap;
   }
 
   .gallery-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
   .achievement-card img {
@@ -242,21 +236,29 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  header img {
-    height: 40px;
+/* --- Small Screens (Mobiles) --- */
+@media (max-width: 768px) {
+  header {
+    align-items: flex-start;
   }
 
   nav ul {
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 40px 15px;
   }
 
   h1, h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   p {
@@ -268,12 +270,31 @@ footer {
     gap: 10px;
   }
 
-  .achievement-card {
-    padding: 15px;
-  }
-
   .contact-form input,
   .contact-form textarea {
     font-size: 14px;
+  }
+
+  footer {
+    font-size: 13px;
+  }
+}
+
+/* --- Extra Small Screens (Very Small Phones) --- */
+@media (max-width: 480px) {
+  nav ul {
+    gap: 8px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-card img {
+    height: 140px;
+  }
+
+  .contact-form {
+    width: 90%;
   }
 }
