@@ -15,7 +15,7 @@ body {
 /* ===== HEADER & NAVBAR (Menu Top Left Corner) ===== */
 header {
   background: #897bca;
-  color: rgb(1, 94, 13);
+  color: rgb(2, 1, 10);
   padding: 10px 25px;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #0d7e12;
+  color: #000a01;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -146,14 +146,14 @@ p {
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #5a1bec;
   border-radius: 8px;
   font-size: 15px;
 }
 
 .contact-form button {
   background: #003366;
-  color: white;
+  color: rgb(62, 14, 194);
   border: none;
   padding: 12px;
   border-radius: 8px;
@@ -211,7 +211,7 @@ p {
 /* ===== FOOTER ===== */
 footer {
   background: #003366;
-  color: white;
+  color: rgb(90, 51, 231);
   text-align: center;
   padding: 15px;
   font-size: 14px;
@@ -251,8 +251,6 @@ footer {
   .logo-container {
     flex-direction: row;
     flex-wrap: wrap;
-    height:50px;
-    width:auto;
   }
 
   section {
@@ -267,10 +265,56 @@ footer {
     font-size: 0.9rem;
   }
 
+  /* ===== Gallery Section ===== */
   .gallery-container {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
+#gallery {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f8f8ff;
+}
+
+#gallery h2 {
+  font-size: 2.2em;
+  color: #4b3ca5;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+#gallery h3 {
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #907fdb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.gallery-row img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #907fdb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 
   .contact-form input,
   .contact-form textarea {
@@ -300,4 +344,3 @@ footer {
     width: 90%;
   }
 }
-
